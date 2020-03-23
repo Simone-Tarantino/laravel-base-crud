@@ -26,7 +26,7 @@ class VideogameController extends Controller
      */
     public function create()
     {
-        //
+        return view('videogames.create');
     }
 
     /**
@@ -37,7 +37,19 @@ class VideogameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $videogame = new Videogame;
+        $videogame->title = $data['title'];
+        $videogame->software_house = $data['software_house'];
+        $videogame->genre = $data['genre'];
+        $videogame->release_date = $data['release_date'];
+        $videogame->price = $data['price'];
+        $save = $videogame->save();
+
+        if ($save == true)
+        {
+            @dd('Success');
+        }
     }
 
     /**

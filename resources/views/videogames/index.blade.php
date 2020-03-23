@@ -10,19 +10,19 @@
     @foreach ($videogames as $videogame)
         <ul>
             <li>
-                {{$videogame->title}}
+                Titolo: {{$videogame->title}}
             </li>
             <li>
-                {{$videogame->software_house}}
+                Software House: {{$videogame->software_house}}
             </li>
             <li>
-                {{$videogame->genre}}
+               Genere: {{$videogame->genre}}
             </li>
             <li>
-                {{$videogame->price}}
+               Prezzo: {{$videogame->price}}€
             </li>
             <li>
-                {{$videogame->release_date}}
+               Data di uscita: {{$videogame->release_date}}
             </li>
         </ul>
     @endforeach
