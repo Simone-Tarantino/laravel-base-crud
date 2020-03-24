@@ -69,7 +69,7 @@ class VideogameController extends Controller
      */
     public function show(Videogame $videogame)
     {
-        //
+        return view('videogames.show', compact('videogame'));
     }
 
     /**

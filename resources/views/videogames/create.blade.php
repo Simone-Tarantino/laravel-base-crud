@@ -1,4 +1,4 @@
-<!@extends('videogames.layouts.layout')
+@extends('videogames.layouts.layout')
 @section('main')
     @if ($errors->any())
         <div class="alert alert-danger">

@@ -1,9 +1,7 @@
 @extends('videogames.layouts.layout')
 @section('main')
-    @foreach ($videogames as $videogame)
-    <a href="{{route('videogames.show', $videogame['id'])}}">
         <div class="videogame">    
-            <ul>
+            <ul>   
                 <li>
                     Titolo: {{$videogame->title}}
                 </li>
@@ -21,7 +19,4 @@
                 </li>
             </ul>
         </div>
-    </a> 
-    @endforeach
 @endsection
-   
