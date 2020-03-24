@@ -1,0 +1,5 @@
+@include('videogames.layouts.partials._head')
+@include('videogames.layouts.partials._header')
+@yield('main')
+@include('videogames.layouts.partials._footer')
+@yield('scripts')

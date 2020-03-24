@@ -48,7 +48,7 @@ class VideogameController extends Controller
 
         if ($save == true)
         {
-            @dd('Success');
+            return redirect()->route('videogames.index');
         }
     }
 
