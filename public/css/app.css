@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Play&display=swap);* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+  font-family: "Play", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+body ul {
+  list-style: none;
+}
+
+body .menu {
+  display: flex;
+  margin-top: 20px;
+}
+
+body .menu li a {
+  border: 1px solid black;
+  padding: 10px;
+  color: black;
+  margin-right: 10px;
+}
+
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .container .videogame {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  color: #333333;
+}
+
+body .container .videogame .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+body .container .videogame .buttons button {
+  margin: 0 10px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+body .form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body .form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body .form-container form input {
+  width: 400px;
+  padding: 10px;
+  text-align: center;
+}
+
+body .form-container form button {
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+body .show-videogame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  color: #333333;
+  width: 300px;
+  text-align: center;
+}
+

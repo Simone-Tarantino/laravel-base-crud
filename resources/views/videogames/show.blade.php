@@ -1,24 +1,24 @@
 @extends('videogames.layouts.layout')
 @section('main')
-        <div class="videogame">    
+        <div class="show-videogame">    
             <ul>
                 <li>
-                    ID: {{$videogame->id}}
+                    <b>ID:</b> {{$videogame->id}}
                 </li>   
                 <li>
-                    Titolo: {{$videogame->title}}
+                    <b>Titolo:</b> {{$videogame->title}}
                 </li>
                 <li>
-                    Software House: {{$videogame->software_house}}
+                    <b>Software House:</b> {{$videogame->software_house}}
                 </li>
                 <li>
-                    Genere: {{$videogame->genre}}
+                    <b>Genere:</b> {{$videogame->genre}}
                 </li>
                 <li>
-                    Prezzo: {{$videogame->price}}€
+                    <b>Prezzo:</b> {{$videogame->price}}€
                 </li>
                 <li>
-                    Data di uscita: {{$videogame->release_date}}
+                    <b>Data di uscita:</b> {{$videogame->release_date}}
                 </li>
             </ul>
         </div>
