@@ -1,7 +1,10 @@
 @extends('videogames.layouts.layout')
 @section('main')
         <div class="videogame">    
-            <ul>   
+            <ul>
+                <li>
+                    ID: {{$videogame->id}}
+                </li>   
                 <li>
                     Titolo: {{$videogame->title}}
                 </li>

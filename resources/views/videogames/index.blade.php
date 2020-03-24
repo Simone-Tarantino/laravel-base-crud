@@ -5,6 +5,9 @@
         <div class="videogame">    
             <ul>
                 <li>
+                    ID: {{$videogame->id}}
+                </li>   
+                <li>
                     Titolo: {{$videogame->title}}
                 </li>
                 <li>

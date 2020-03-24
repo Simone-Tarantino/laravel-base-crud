@@ -57,7 +57,7 @@ class VideogameController extends Controller
 
         if ($save == true)
         {
-            return redirect()->route('videogames.index');
+            return redirect()->route('videogames.show', compact('videogame'));
         }
     }
 
@@ -69,6 +69,10 @@ class VideogameController extends Controller
      */
     public function show(Videogame $videogame)
     {
+        if(empty($videogame)){
+            abort('404');
+        }
+
         return view('videogames.show', compact('videogame'));
     }
 
@@ -78,9 +82,13 @@ class VideogameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Videogame $videogame)
     {
-        //
+        if (empty($videogame)) {
+            abort('404');
+        }
+
+        return view('videogames.edit', compact('videogame'));
     }
 
     /**
@@ -90,9 +98,12 @@ class VideogameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Videogame $videogame)
     {
-        //
+        $data = $request->all();
+        $videogame->update($data);
+
+        return view('videogames.show', compact('videogame'));
     }
 
     /**
@@ -101,8 +112,9 @@ class VideogameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Videogame $videogame)
     {
-        //
+        $videogame->delete();
+        return view('videogames.index');
     }
 }
