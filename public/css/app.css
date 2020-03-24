@@ -39,6 +39,9 @@ body .container .videogame {
   margin: 20px;
   padding: 20px;
   border: 1px solid black;
+}
+
+body .container .videogame ul li {
   color: #333333;
 }
 
@@ -53,6 +56,17 @@ body .container .videogame .buttons button {
   margin: 0 10px;
   font-weight: bold;
   padding: 5px;
+}
+
+body .container .pop-up {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid black;
+  padding: 30px;
 }
 
 body .form-container {

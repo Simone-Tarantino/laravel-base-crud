@@ -36,7 +36,11 @@ body {
             margin: 20px;
             padding: 20px;
             border: 1px solid black;
-            color: rgb(51, 51, 51);
+            ul {
+                li {
+                    color: rgb(51, 51, 51);
+                }
+            }
             .buttons {
                 display: flex;
                 justify-content: center;
@@ -48,6 +52,16 @@ body {
                     padding: 5px;
                 }
             }
+        }
+        .pop-up {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid black;
+            padding: 30px;
         }
     }
     .form-container {
