@@ -37,13 +37,22 @@ class VideogameController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|string',
+            'software_house' => 'required|string',
+            'genre' => 'required|string',
+            'release_date' => 'required|date',
+            'price' => 'required|numeric'
+        ]);
+
         $data = $request->all();
         $videogame = new Videogame;
-        $videogame->title = $data['title'];
-        $videogame->software_house = $data['software_house'];
-        $videogame->genre = $data['genre'];
-        $videogame->release_date = $data['release_date'];
-        $videogame->price = $data['price'];
+        // $videogame->title = $data['title'];
+        // $videogame->software_house = $data['software_house'];
+        // $videogame->genre = $data['genre'];
+        // $videogame->release_date = $data['release_date'];
+        // $videogame->price = $data['price'];
+        $videogame->fill($data);
         $save = $videogame->save();
 
         if ($save == true)
@@ -58,7 +67,7 @@ class VideogameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Videogame $videogame)
     {
         //
     }
